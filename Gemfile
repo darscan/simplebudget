@@ -1,19 +1,19 @@
 require 'rbconfig'
 HOST_OS = RbConfig::CONFIG['host_os']
 source 'http://rubygems.org'
-gem 'rails', '3.1.1'
+gem 'rails', '5.2.4.6'
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails', '~> 5.0.5'
+  gem 'coffee-rails', '~> 4.2.2'
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.0.1'
 if HOST_OS =~ /linux/i
   gem 'therubyracer', '>= 0.9.8'
 end
 gem "haml", ">= 3.1.2"
-gem "haml-rails", ">= 0.3.4", :group => :development
-gem "rspec-rails", ">= 2.8.0.rc1", :group => [:development, :test]
+gem "haml-rails", ">= 0.5.3", :group => :development
+gem "rspec-rails", ">= 2.8.0", :group => [:development, :test]
 gem "database_cleaner", ">= 0.6.7", :group => :test
 gem "mongoid-rspec", ">= 1.4.4", :group => :test
 gem "factory_girl_rails", ">= 1.3.0", :group => :test
